@@ -1,48 +1,65 @@
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 120vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
-	font-size: 3rem;
-	color:#e2dbdb;
+/* Hello Section */
+#hello{
+background-image: url(./img/background.png);
+background-size: cover;
+background-position: top center;
+position: relative;
+z-index: 1;
 }
-
-hr {
-	border-color: #F05F44;
-	border-width: 3px;
-	max-width: 65px;
+#hello::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
 }
-.buffer {
-	height: 10rem;
+#hello h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: white;
 }
-
-.btn {
-	font-weight: 700;
-	border-radius: 300px;
-	text-transform: uppercase;
+#hello .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .3s ease ;
+    transition-property: background-color,color;
 }
-
-.btn-xl {
-	padding: 1rem 2rem;
-
+#hello .cta:hover {
+    color: white;
+    background-color: crimson;
 }
-
-.btn-primary {
-	background-color: #F05F44;
-	border-color: #F05F44;
-
-}
-
-.btn-primary:hover {
-	background-color: #ee4b08;
-	border-color: #ee4b08;
-	border-width: 4px;
-}
+/* End of Hello Section*/
